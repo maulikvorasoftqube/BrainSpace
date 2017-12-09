@@ -16,5 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tblTherapyList;
 
+@property (strong, nonatomic) IBOutlet UIButton *btnBack;
+- (IBAction)btnBack:(id)sender;
 
 @end

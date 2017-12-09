@@ -22,6 +22,7 @@
 //viewcontroller
 #import "LoginVC.h"
 #import "KYDrawerController.h"
+#import "TherapyDetailVC.h"
 
 
 #define URL_MAIN  @"http://43.252.197.237/PHP/projects/therapy/api/"

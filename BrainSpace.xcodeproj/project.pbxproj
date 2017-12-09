@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0904ED5D1FDBB80C0085BD30 /* TherapyDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0904ED5C1FDBB80C0085BD30 /* TherapyDetailVC.m */; };
 		098D3F101FDA6E4A0078B376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F0F1FDA6E4A0078B376 /* main.m */; };
 		098D3F131FDA6E4A0078B376 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F121FDA6E4A0078B376 /* AppDelegate.m */; };
 		098D3F191FDA6E4A0078B376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D3F171FDA6E4A0078B376 /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0904ED5B1FDBB80C0085BD30 /* TherapyDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TherapyDetailVC.h; sourceTree = "<group>"; };
+		0904ED5C1FDBB80C0085BD30 /* TherapyDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TherapyDetailVC.m; sourceTree = "<group>"; };
 		098D3F0B1FDA6E490078B376 /* BrainSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098D3F0F1FDA6E4A0078B376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		098D3F111FDA6E4A0078B376 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0904ED5A1FDBB7C10085BD30 /* TherapyDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				0904ED5B1FDBB80C0085BD30 /* TherapyDetailVC.h */,
+				0904ED5C1FDBB80C0085BD30 /* TherapyDetailVC.m */,
+			);
+			path = TherapyDetailVC;
+			sourceTree = "<group>";
+		};
 		098D3F021FDA6E490078B376 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 				098D3F3F1FDA8A0D0078B376 /* StartScreenVC */,
 				098D3F3E1FDA705D0078B376 /* LoginVC */,
 				098D3F401FDA8A230078B376 /* HomeVC */,
+				0904ED5A1FDBB7C10085BD30 /* TherapyDetailVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -374,6 +387,7 @@
 				098D3F541FDAC0F40078B376 /* KYDrawerController.m in Sources */,
 				098D3F461FDA8A920078B376 /* HomeVC.m in Sources */,
 				098D3F331FDA6F1C0078B376 /* NIDropDown.m in Sources */,
+				0904ED5D1FDBB80C0085BD30 /* TherapyDetailVC.m in Sources */,
 				098D3F551FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.m in Sources */,
 				098D3F341FDA6F1C0078B376 /* Reachability.m in Sources */,
 				098D3F351FDA6F1C0078B376 /* UITextView+Placeholder.m in Sources */,
