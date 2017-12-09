@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		098D3F101FDA6E4A0078B376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F0F1FDA6E4A0078B376 /* main.m */; };
 		098D3F131FDA6E4A0078B376 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F121FDA6E4A0078B376 /* AppDelegate.m */; };
-		098D3F161FDA6E4A0078B376 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F151FDA6E4A0078B376 /* ViewController.m */; };
 		098D3F191FDA6E4A0078B376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D3F171FDA6E4A0078B376 /* Main.storyboard */; };
 		098D3F1B1FDA6E4A0078B376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098D3F1A1FDA6E4A0078B376 /* Assets.xcassets */; };
 		098D3F1E1FDA6E4A0078B376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D3F1C1FDA6E4A0078B376 /* LaunchScreen.storyboard */; };
+		098D3F331FDA6F1C0078B376 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F291FDA6F1C0078B376 /* NIDropDown.m */; };
+		098D3F341FDA6F1C0078B376 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F2C1FDA6F1C0078B376 /* Reachability.m */; };
+		098D3F351FDA6F1C0078B376 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F2F1FDA6F1C0078B376 /* UITextView+Placeholder.m */; };
+		098D3F361FDA6F1C0078B376 /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F321FDA6F1C0078B376 /* WToast.m */; };
+		098D3F431FDA8A840078B376 /* StartScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F421FDA8A840078B376 /* StartScreenVC.m */; };
+		098D3F461FDA8A920078B376 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F451FDA8A920078B376 /* HomeVC.m */; };
+		098D3F491FDA8AA00078B376 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F481FDA8AA00078B376 /* LoginVC.m */; };
+		098D3F4C1FDAAA2E0078B376 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F4B1FDAAA2E0078B376 /* Utility.m */; };
+		098D3F541FDAC0F40078B376 /* KYDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F4F1FDAC0F40078B376 /* KYDrawerController.m */; };
+		098D3F551FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F511FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.m */; };
+		098D3F561FDAC0F40078B376 /* KYEmbedMainControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F531FDAC0F40078B376 /* KYEmbedMainControllerSegue.m */; };
+		AF0E959B846E9CEFC265E643 /* libPods-BrainSpace.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7F1EFCD0F3B1C40576030C /* libPods-BrainSpace.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +31,36 @@
 		098D3F0F1FDA6E4A0078B376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		098D3F111FDA6E4A0078B376 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		098D3F121FDA6E4A0078B376 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		098D3F141FDA6E4A0078B376 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		098D3F151FDA6E4A0078B376 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		098D3F181FDA6E4A0078B376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		098D3F1A1FDA6E4A0078B376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		098D3F1D1FDA6E4A0078B376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		098D3F1F1FDA6E4A0078B376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		098D3F281FDA6F1C0078B376 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
+		098D3F291FDA6F1C0078B376 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
+		098D3F2B1FDA6F1C0078B376 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		098D3F2C1FDA6F1C0078B376 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		098D3F2E1FDA6F1C0078B376 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		098D3F2F1FDA6F1C0078B376 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		098D3F311FDA6F1C0078B376 /* WToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WToast.h; sourceTree = "<group>"; };
+		098D3F321FDA6F1C0078B376 /* WToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WToast.m; sourceTree = "<group>"; };
+		098D3F381FDA6F280078B376 /* Globle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globle.h; sourceTree = "<group>"; };
+		098D3F411FDA8A840078B376 /* StartScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenVC.h; sourceTree = "<group>"; };
+		098D3F421FDA8A840078B376 /* StartScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenVC.m; sourceTree = "<group>"; };
+		098D3F441FDA8A920078B376 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		098D3F451FDA8A920078B376 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		098D3F471FDA8AA00078B376 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		098D3F481FDA8AA00078B376 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		098D3F4A1FDAAA2E0078B376 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		098D3F4B1FDAAA2E0078B376 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		098D3F4E1FDAC0F40078B376 /* KYDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYDrawerController.h; sourceTree = "<group>"; };
+		098D3F4F1FDAC0F40078B376 /* KYDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYDrawerController.m; sourceTree = "<group>"; };
+		098D3F501FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYEmbedDrawerControllerSegue.h; sourceTree = "<group>"; };
+		098D3F511FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYEmbedDrawerControllerSegue.m; sourceTree = "<group>"; };
+		098D3F521FDAC0F40078B376 /* KYEmbedMainControllerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYEmbedMainControllerSegue.h; sourceTree = "<group>"; };
+		098D3F531FDAC0F40078B376 /* KYEmbedMainControllerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYEmbedMainControllerSegue.m; sourceTree = "<group>"; };
+		8D7F1EFCD0F3B1C40576030C /* libPods-BrainSpace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrainSpace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDE42CA68556E20EAAA7041 /* Pods-BrainSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrainSpace/Pods-BrainSpace.release.xcconfig"; sourceTree = "<group>"; };
+		DCEEA0AE85190A27D33400D5 /* Pods-BrainSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainSpace/Pods-BrainSpace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0E959B846E9CEFC265E643 /* libPods-BrainSpace.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +80,8 @@
 			children = (
 				098D3F0D1FDA6E490078B376 /* BrainSpace */,
 				098D3F0C1FDA6E490078B376 /* Products */,
+				8F91072A68541836A408F2CD /* Pods */,
+				BE3AF1361A654EFE65E0B7D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +96,11 @@
 		098D3F0D1FDA6E490078B376 /* BrainSpace */ = {
 			isa = PBXGroup;
 			children = (
+				098D3F261FDA6F1C0078B376 /* ThirdParty */,
+				098D3F371FDA6F280078B376 /* Utility */,
+				098D3F3C1FDA6F310078B376 /* ViewController */,
 				098D3F111FDA6E4A0078B376 /* AppDelegate.h */,
 				098D3F121FDA6E4A0078B376 /* AppDelegate.m */,
-				098D3F141FDA6E4A0078B376 /* ViewController.h */,
-				098D3F151FDA6E4A0078B376 /* ViewController.m */,
 				098D3F171FDA6E4A0078B376 /* Main.storyboard */,
 				098D3F1A1FDA6E4A0078B376 /* Assets.xcassets */,
 				098D3F1C1FDA6E4A0078B376 /* LaunchScreen.storyboard */,
@@ -79,6 +118,131 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		098D3F261FDA6F1C0078B376 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F4D1FDAC0CB0078B376 /* KYDrawerController */,
+				098D3F271FDA6F1C0078B376 /* NIDropdown */,
+				098D3F2A1FDA6F1C0078B376 /* Rechability */,
+				098D3F2D1FDA6F1C0078B376 /* TextView_PlaceHolder */,
+				098D3F301FDA6F1C0078B376 /* WToast */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		098D3F271FDA6F1C0078B376 /* NIDropdown */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F281FDA6F1C0078B376 /* NIDropDown.h */,
+				098D3F291FDA6F1C0078B376 /* NIDropDown.m */,
+			);
+			path = NIDropdown;
+			sourceTree = "<group>";
+		};
+		098D3F2A1FDA6F1C0078B376 /* Rechability */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F2B1FDA6F1C0078B376 /* Reachability.h */,
+				098D3F2C1FDA6F1C0078B376 /* Reachability.m */,
+			);
+			path = Rechability;
+			sourceTree = "<group>";
+		};
+		098D3F2D1FDA6F1C0078B376 /* TextView_PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F2E1FDA6F1C0078B376 /* UITextView+Placeholder.h */,
+				098D3F2F1FDA6F1C0078B376 /* UITextView+Placeholder.m */,
+			);
+			path = TextView_PlaceHolder;
+			sourceTree = "<group>";
+		};
+		098D3F301FDA6F1C0078B376 /* WToast */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F311FDA6F1C0078B376 /* WToast.h */,
+				098D3F321FDA6F1C0078B376 /* WToast.m */,
+			);
+			path = WToast;
+			sourceTree = "<group>";
+		};
+		098D3F371FDA6F280078B376 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F381FDA6F280078B376 /* Globle.h */,
+				098D3F4A1FDAAA2E0078B376 /* Utility.h */,
+				098D3F4B1FDAAA2E0078B376 /* Utility.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		098D3F3C1FDA6F310078B376 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F3F1FDA8A0D0078B376 /* StartScreenVC */,
+				098D3F3E1FDA705D0078B376 /* LoginVC */,
+				098D3F401FDA8A230078B376 /* HomeVC */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		098D3F3E1FDA705D0078B376 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F471FDA8AA00078B376 /* LoginVC.h */,
+				098D3F481FDA8AA00078B376 /* LoginVC.m */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		098D3F3F1FDA8A0D0078B376 /* StartScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F411FDA8A840078B376 /* StartScreenVC.h */,
+				098D3F421FDA8A840078B376 /* StartScreenVC.m */,
+			);
+			path = StartScreenVC;
+			sourceTree = "<group>";
+		};
+		098D3F401FDA8A230078B376 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F441FDA8A920078B376 /* HomeVC.h */,
+				098D3F451FDA8A920078B376 /* HomeVC.m */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		098D3F4D1FDAC0CB0078B376 /* KYDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				098D3F4E1FDAC0F40078B376 /* KYDrawerController.h */,
+				098D3F4F1FDAC0F40078B376 /* KYDrawerController.m */,
+				098D3F501FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.h */,
+				098D3F511FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.m */,
+				098D3F521FDAC0F40078B376 /* KYEmbedMainControllerSegue.h */,
+				098D3F531FDAC0F40078B376 /* KYEmbedMainControllerSegue.m */,
+			);
+			path = KYDrawerController;
+			sourceTree = "<group>";
+		};
+		8F91072A68541836A408F2CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCEEA0AE85190A27D33400D5 /* Pods-BrainSpace.debug.xcconfig */,
+				AFDE42CA68556E20EAAA7041 /* Pods-BrainSpace.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE3AF1361A654EFE65E0B7D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D7F1EFCD0F3B1C40576030C /* libPods-BrainSpace.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 098D3F221FDA6E4A0078B376 /* Build configuration list for PBXNativeTarget "BrainSpace" */;
 			buildPhases = (
+				B32226303A5A62D80311E904 /* [CP] Check Pods Manifest.lock */,
 				098D3F071FDA6E490078B376 /* Sources */,
 				098D3F081FDA6E490078B376 /* Frameworks */,
 				098D3F091FDA6E490078B376 /* Resources */,
+				834C55CC977765C4FB67E485 /* [CP] Embed Pods Frameworks */,
+				8D84EC4B61753FC2F6B36362 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,7 +277,7 @@
 				TargetAttributes = {
 					098D3F0A1FDA6E490078B376 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -145,13 +312,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		834C55CC977765C4FB67E485 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrainSpace/Pods-BrainSpace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D84EC4B61753FC2F6B36362 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrainSpace/Pods-BrainSpace-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B32226303A5A62D80311E904 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		098D3F071FDA6E490078B376 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				098D3F161FDA6E4A0078B376 /* ViewController.m in Sources */,
+				098D3F561FDAC0F40078B376 /* KYEmbedMainControllerSegue.m in Sources */,
 				098D3F131FDA6E4A0078B376 /* AppDelegate.m in Sources */,
+				098D3F431FDA8A840078B376 /* StartScreenVC.m in Sources */,
+				098D3F4C1FDAAA2E0078B376 /* Utility.m in Sources */,
+				098D3F491FDA8AA00078B376 /* LoginVC.m in Sources */,
+				098D3F361FDA6F1C0078B376 /* WToast.m in Sources */,
+				098D3F541FDAC0F40078B376 /* KYDrawerController.m in Sources */,
+				098D3F461FDA8A920078B376 /* HomeVC.m in Sources */,
+				098D3F331FDA6F1C0078B376 /* NIDropDown.m in Sources */,
+				098D3F551FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.m in Sources */,
+				098D3F341FDA6F1C0078B376 /* Reachability.m in Sources */,
+				098D3F351FDA6F1C0078B376 /* UITextView+Placeholder.m in Sources */,
 				098D3F101FDA6E4A0078B376 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,8 +493,10 @@
 		};
 		098D3F231FDA6E4A0078B376 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCEEA0AE85190A27D33400D5 /* Pods-BrainSpace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BrainSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SDK.BrainSpace;
@@ -279,8 +506,10 @@
 		};
 		098D3F241FDA6E4A0078B376 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFDE42CA68556E20EAAA7041 /* Pods-BrainSpace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BrainSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SDK.BrainSpace;
@@ -307,6 +536,7 @@
 				098D3F241FDA6E4A0078B376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
