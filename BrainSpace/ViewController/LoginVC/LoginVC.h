@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Globle.h"
-
+#import <GoogleSignIn/GoogleSignIn.h>
 @interface LoginVC : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *txtEmail;

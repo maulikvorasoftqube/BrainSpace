@@ -10,4 +10,17 @@ pod 'RealReachability'
 pod 'IQKeyboardManager'
 pod 'FTIndicator'
 
+//
+pod 'FrameAccessor', '~> 1.3.2'
+pod 'MKFoundationKit/NSArray', '~> 1.2.2'
+
+
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
+
+
+pod 'Firebase'
+pod 'GoogleSignIn'
+
 end

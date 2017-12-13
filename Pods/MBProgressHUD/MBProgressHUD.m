@@ -106,7 +106,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
     // Make it invisible for now
-    self.alpha = 0.0f;
+    self.alpha = 0.1f;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.layer.allowsGroupOpacity = NO;
 
@@ -323,7 +323,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     backgroundView.backgroundColor = [UIColor clearColor];
     backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    backgroundView.alpha = 0.f;
+    backgroundView.alpha = 0.1f;
     [self addSubview:backgroundView];
     _backgroundView = backgroundView;
 

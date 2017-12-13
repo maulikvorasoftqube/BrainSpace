@@ -7,10 +7,14 @@
 //
 
 #import "LoginVC.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 
-@interface LoginVC ()
+@interface LoginVC ()<GIDSignInDelegate,GIDSignInUIDelegate>
 {
     NSString *is_selected;
+    GIDSignIn *signIn;
 }
 @end
 
@@ -41,11 +45,18 @@
     [Utility setLeftViewInTextField:self.txtPassword imageName:@"" leftSpace:0 topSpace:0 size:5];
     
     
+    signIn = [GIDSignIn sharedInstance];
+    signIn.clientID=@"173454432239-g5gkshrsijtua909k9uhaafnj9odgjii.apps.googleusercontent.com";  // here add your ID
+    signIn.scopes = @[ @"profile" ];
+    signIn.delegate = (id)self;
+    
+    [GIDSignIn sharedInstance].uiDelegate = self;
+
 }
 
 #pragma mark - apiCall Method
 
--(void)apiCall_login
+-(void)apiCall_login:(NSString *)is_social emailid:(NSString*)emailid
 {
     if ([Utility isInterNetConnectionIsActive] == false) {
         [WToast showWithText:Internet_Connection_Not duration:kWTShort];
@@ -55,9 +66,19 @@
     NSString *strURL=[NSString stringWithFormat:@"%@%@",URL_MAIN,login];
     
     NSMutableDictionary *dicParams=[[NSMutableDictionary alloc]init];
-    [dicParams setValue:[NSString stringWithFormat:@"%@",self.txtEmail.text] forKey:@"email"];
-    [dicParams setValue:[NSString stringWithFormat:@"%@",self.txtPassword.text] forKey:@"password"];
-    [dicParams setValue:@"0" forKey:@"is_social"];
+    if([is_social isEqualToString:@"1"])
+    {
+        [dicParams setValue:[NSString stringWithFormat:@"%@",emailid] forKey:@"email"];
+        [dicParams setValue:[NSString stringWithFormat:@"%@",emailid] forKey:@"password"];
+        [dicParams setValue:@"1" forKey:@"is_social"];
+    }
+    else
+    {
+        [dicParams setValue:[NSString stringWithFormat:@"%@",self.txtEmail.text] forKey:@"email"];
+        [dicParams setValue:[NSString stringWithFormat:@"%@",self.txtPassword.text] forKey:@"password"];
+        [dicParams setValue:@"0" forKey:@"is_social"];
+    }
+    
     [dicParams setValue:@"1" forKey:@"is_agree"];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -68,20 +89,65 @@
             NSString *status=[dicResponce objectForKey:@"status"];
             if([status integerValue] == 1)
             {
-                NSMutableArray *arrusers=[dicResponce objectForKey:@"user"];
-                if([arrusers count] != 0)
+                NSMutableArray *arrusers=[[dicResponce objectForKey:@"user"]mutableCopy];
+                if([arrusers isKindOfClass:[NSMutableDictionary class]])
                 {
-                    NSString *email=[[arrusers objectAtIndex:0]objectForKey:@"email"];
-                    NSString *password=[[arrusers objectAtIndex:0]objectForKey:@"password"];
-                    NSString *userid=[[arrusers objectAtIndex:0]objectForKey:@"id"];
-                    
-                    [[NSUserDefaults standardUserDefaults]setObject:email forKey:@"email"];
-                    [[NSUserDefaults standardUserDefaults]setObject:password forKey:@"password"];
-                    [[NSUserDefaults standardUserDefaults]setObject:userid forKey:@"userid"];
-                    [[NSUserDefaults standardUserDefaults]synchronize];
-                    
+                    NSMutableDictionary *dicusers=[dicResponce objectForKey:@"user"];
+                    NSString *stris_social=[dicusers objectForKey:@"is_social"];
+                    if([stris_social integerValue] == 1)
+                    {
+                        NSString *email=[dicusers objectForKey:@"social_id"];
+                        NSString *password=[dicusers objectForKey:@"password"];
+                        NSString *userid=[dicusers objectForKey:@"id"];
+                        
+                        [[NSUserDefaults standardUserDefaults]setObject:email forKey:@"email"];
+                        [[NSUserDefaults standardUserDefaults]setObject:password forKey:@"password"];
+                        [[NSUserDefaults standardUserDefaults]setObject:userid forKey:@"userid"];
+                        [[NSUserDefaults standardUserDefaults]synchronize];
+                    }
+                    else
+                    {
+                        NSString *email=[dicusers objectForKey:@"email"];
+                        NSString *password=[dicusers objectForKey:@"password"];
+                        NSString *userid=[dicusers objectForKey:@"id"];
+                        
+                        [[NSUserDefaults standardUserDefaults]setObject:email forKey:@"email"];
+                        [[NSUserDefaults standardUserDefaults]setObject:password forKey:@"password"];
+                        [[NSUserDefaults standardUserDefaults]setObject:userid forKey:@"userid"];
+                        [[NSUserDefaults standardUserDefaults]synchronize];
+                    }
                     UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
                     [self.navigationController pushViewController:vc animated:YES];
+                    
+                }
+                else if([arrusers count] != 0)
+                {
+                    NSString *stris_social=[[arrusers objectAtIndex:0]objectForKey:@"is_social"];
+                    if([stris_social integerValue] == 1)
+                    {
+                        NSString *email=[[arrusers objectAtIndex:0]objectForKey:@"social_id"];
+                        NSString *password=[[arrusers objectAtIndex:0]objectForKey:@"password"];
+                        NSString *userid=[[arrusers objectAtIndex:0]objectForKey:@"id"];
+                        
+                        [[NSUserDefaults standardUserDefaults]setObject:email forKey:@"email"];
+                        [[NSUserDefaults standardUserDefaults]setObject:password forKey:@"password"];
+                        [[NSUserDefaults standardUserDefaults]setObject:userid forKey:@"userid"];
+                        [[NSUserDefaults standardUserDefaults]synchronize];
+                    }
+                    else
+                    {
+                        NSString *email=[[arrusers objectAtIndex:0]objectForKey:@"email"];
+                        NSString *password=[[arrusers objectAtIndex:0]objectForKey:@"password"];
+                        NSString *userid=[[arrusers objectAtIndex:0]objectForKey:@"id"];
+                        
+                        [[NSUserDefaults standardUserDefaults]setObject:email forKey:@"email"];
+                        [[NSUserDefaults standardUserDefaults]setObject:password forKey:@"password"];
+                        [[NSUserDefaults standardUserDefaults]setObject:userid forKey:@"userid"];
+                        [[NSUserDefaults standardUserDefaults]synchronize];
+                    }
+                    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
+                    [self.navigationController pushViewController:vc animated:YES];
+                    
                 }
                 else
                 {
@@ -138,12 +204,72 @@
         return;
     }
     
-    [self apiCall_login];
+    [self apiCall_login:@"0" emailid:@""];
     
     
 }
+
 - (IBAction)btnFBLogin:(id)sender {
+    FBSDKLoginManager *loginfb = [[FBSDKLoginManager alloc] init];
+    //   [login setLoginBehavior:FBSDKLoginBehaviorWeb];
+    [loginfb
+     logInWithReadPermissions: @[@"public_profile",@"email"]
+     fromViewController:self
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error)
+     {
+         if (error)
+         {
+             NSLog(@"Process error");
+         } else if (result.isCancelled)
+         {
+             NSLog(@"Cancelled");
+         } else
+         {
+             if ([FBSDKAccessToken currentAccessToken])
+             {
+                 [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                 NSDictionary *parameters = [NSDictionary dictionaryWithObject:@"id,email,first_name,last_name,name,picture{url}" forKey:@"fields"];
+                 
+                 [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:parameters]
+                  startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error)
+                  {
+                      [MBProgressHUD hideHUDForView:self.view animated:YES];
+                      if (!error)
+                      {
+                          NSMutableDictionary *dic=[result mutableCopy];
+                          NSString *email=[dic objectForKey:@"id"];
+                          if([NSString stringWithFormat:@"%@",email].length != 0)
+                          {
+                              [self apiCall_login:@"1" emailid:email];
+                          }
+                          else
+                          {
+                              [WToast showWithText:@"Please try again!"];
+                          }
+                      }
+                  }];
+             }
+         }
+     }];
 }
+
+- (void)signIn:(GIDSignIn *)signIn
+didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+
+   /* NSString *userId = user.userID;
+    NSString *idToken = user.authentication.idToken;
+    NSString *fullName = user.profile.name;
+    NSString *givenName = user.profile.givenName;
+    NSString *familyName = user.profile.familyName;*/
+    NSString *email = user.profile.email;
+    if(email.length != 0)
+    {
+        [self apiCall_login:@"1" emailid:email];
+    }
+}
+
 - (IBAction)btnGoogleLogin:(id)sender {
+   [[GIDSignIn sharedInstance] signIn];
 }
 @end

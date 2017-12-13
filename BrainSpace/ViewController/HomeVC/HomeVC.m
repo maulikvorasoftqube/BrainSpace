@@ -89,7 +89,7 @@
                         arrTherayList =[arrusers mutableCopy];
                         [self.tblTherapyList reloadData];
                         
-                        }
+                    }
                     else
                     {
                         
