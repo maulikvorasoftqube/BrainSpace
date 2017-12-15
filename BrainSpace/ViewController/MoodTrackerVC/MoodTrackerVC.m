@@ -33,27 +33,27 @@
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [_imgMoodImg addGestureRecognizer:swipeRight];
   
+    self.graph.dataSource = self;
+    self.graph.lineWidth = 3.0;
+    self.graph.valueLabelCount = 6;
     
     [self apiCall_getallmoods];
-    //
-    [self _setupExampleGraph];
-  
+    
 }
 
 - (void)_setupExampleGraph {
     
-    self.data = @[
-                  @[@20, @40, @20, @60, @40, @140, @80],
-                  @[@40, @20, @60, @100, @60, @20, @60],
-                  @[@80, @60, @40, @160, @100, @40, @110]
-                  ];
+    //self.data = @[
+    //              @[@20, @40, @20, @60, @40, @140, @80],
+    //              @[@40, @20, @60, @100, @60, @20, @60],
+    //              @[@80, @60, @40, @160, @100, @40, @110]
+    //              ];
     
-    self.labels = @[@"2001", @"2002", @"2003", @"2004", @"2005", @"2006", @"2007"];
+    //self.labels = @[@"2001", @"2002", @"2003", @"2004", @"2005", @"2006", @"2007"];
     
-    self.graph.dataSource = self;
-    self.graph.lineWidth = 3.0;
     
-    self.graph.valueLabelCount = 6;
+    
+   // self.graph.valueLabelCount = 6;
     
     [self.graph draw];
 }
@@ -69,9 +69,9 @@
 }
 
 - (UIColor *)colorForLineAtIndex:(NSInteger)index {
-    id colors = @[[UIColor colorWithRed:226/255.0f green:13/255.0f blue:30/255.0f alpha:1.0f],
-                  [UIColor colorWithRed:0/255.0f green:174/255.0f blue:48/255.0f alpha:1.0f],
-                  [UIColor colorWithRed:235/255.0f green:230/255.0f blue:70/255.0f alpha:1.0f]
+    id colors = @[[UIColor colorWithRed:0/255.0f green:174/255.0f blue:48/255.0f alpha:1.0f],
+                  [UIColor colorWithRed:235/255.0f green:230/255.0f blue:70/255.0f alpha:1.0f],
+                  [UIColor colorWithRed:226/255.0f green:13/255.0f blue:30/255.0f alpha:1.0f]
                   ];
     return [colors objectAtIndex:index];
 }
@@ -181,6 +181,7 @@
             if([status integerValue] == 1)
             {
                 [WToast showWithText:[dicResponce objectForKey:@"message"]];
+                [self apiCall_getallmoods];
             }
             else
             {
@@ -224,7 +225,48 @@
             NSString *status=[dicResponce objectForKey:@"status"];
             if([status integerValue] == 1)
             {
-                [WToast showWithText:[dicResponce objectForKey:@"message"]];
+                NSMutableArray *arrResponceDataata=[dicResponce objectForKey:@"data"];
+                if([arrResponceDataata count] != 0)
+                {
+                    NSMutableArray *arrTemp_date=[[NSMutableArray alloc]init];
+                    [arrTemp_date addObject:@"0"];
+                    NSMutableArray *arrTemp=[[NSMutableArray alloc]init];
+                    NSMutableArray *arrGood_Temp=[[NSMutableArray alloc]init];
+                    [arrGood_Temp addObject:@"0"];
+                    NSMutableArray *arrSilent_Temp=[[NSMutableArray alloc]init];
+                    [arrSilent_Temp addObject:@"0"];
+                    NSMutableArray *arrBad_Temp=[[NSMutableArray alloc]init];
+                    [arrBad_Temp addObject:@"0"];
+                    
+                    for (NSMutableDictionary *dic in arrResponceDataata)
+                    {
+                        NSMutableArray *mood=[[dic objectForKey:@"mood"]mutableCopy];
+                        
+                        if([mood count] != 0)
+                        {
+                            [arrGood_Temp addObject:[[mood objectAtIndex:0] objectForKey:@"Good"]];
+                            [arrSilent_Temp addObject:[[mood objectAtIndex:0] objectForKey:@"Silent"]];
+                            [arrBad_Temp addObject:[[mood objectAtIndex:0] objectForKey:@"Bad"]];
+                            
+                            NSMutableArray *arrDateMain=[[NSMutableArray alloc]init];
+                            NSString *strDate=[[mood objectAtIndex:0] objectForKey:@"created_date"];
+                            strDate = [Utility convertDateFtrToDtaeFtr:@"yyyy-MM-dd" newDateFtr:@"dd" date:strDate];
+                            [arrDateMain addObject:strDate];
+                            
+                            [arrTemp_date addObject:strDate];
+                        }
+                    }
+                    [arrTemp addObject:arrGood_Temp];
+                    [arrTemp addObject:arrSilent_Temp];
+                    [arrTemp addObject:arrBad_Temp];
+                    
+                    self.data=[arrTemp mutableCopy];
+                    self.labels=[arrTemp_date mutableCopy];
+                    
+                    [self.graph reset];
+                    [self.graph draw];
+                }
+                
             }
             else
             {

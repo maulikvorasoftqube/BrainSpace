@@ -82,24 +82,44 @@
             break;
         }
         case 5:{
-            //======
-            NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
-            NSDictionary * dict = [defs dictionaryRepresentation];
-            for (id key in dict) {
-                [defs removeObjectForKey:key];
-            }
-            [defs synchronize];
-            //======
-            UIViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginVC"];
-            UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:viewController];
-            navController.navigationBar.hidden=YES;
-            elDrawer.mainViewController=navController;
+            UIAlertController * alert = [UIAlertController
+                                         alertControllerWithTitle:@"Logout"
+                                         message:@"Are You Sure Want to Logout!"
+                                         preferredStyle:UIAlertControllerStyleAlert];
             
+            //Add Buttons
+            UIAlertAction* yesButton = [UIAlertAction
+                                        actionWithTitle:@"Yes"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                            //======
+                                            NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
+                                            NSDictionary * dict = [defs dictionaryRepresentation];
+                                            for (id key in dict) {
+                                                [defs removeObjectForKey:key];
+                                            }
+                                            [defs synchronize];
+                                            //======
+                                            KYDrawerController *elDrawer1 = (KYDrawerController*)self.navigationController.parentViewController;
+                                            UIViewController *viewController1 = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginVC"];
+                                            UINavigationController *navController1=[[UINavigationController alloc]initWithRootViewController:viewController1];
+                                            navController1.navigationBar.hidden=YES;
+                                            elDrawer1.mainViewController=navController1;
+                                            [elDrawer1 setDrawerState:KYDrawerControllerDrawerStateClosed animated:YES];
+                                        }];
+            
+            UIAlertAction* noButton = [UIAlertAction
+                                       actionWithTitle:@"Cancel"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                       }];
+            [alert addAction:yesButton];
+            [alert addAction:noButton];
+            [self presentViewController:alert animated:YES completion:nil];
+           
             break;
         }
-
-
-            
+   
         default:{
             break;
         }

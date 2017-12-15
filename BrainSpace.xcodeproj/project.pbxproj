@@ -14,8 +14,8 @@
 		09155E451FDE6732008B59C2 /* MoodTrackerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09155E441FDE6732008B59C2 /* MoodTrackerVC.m */; };
 		09155E561FDE8A7C008B59C2 /* GKBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 09155E4D1FDE8A7C008B59C2 /* GKBar.m */; };
 		09155E571FDE8A7C008B59C2 /* GKBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 09155E4F1FDE8A7C008B59C2 /* GKBarGraph.m */; };
-		09155E581FDE8A7C008B59C2 /* GKLineGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 09155E531FDE8A7C008B59C2 /* GKLineGraph.m */; };
 		09155E591FDE8A7C008B59C2 /* UIColor+GraphKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 09155E551FDE8A7C008B59C2 /* UIColor+GraphKit.m */; };
+		0970A9411FE2B1A20063FDD6 /* GKLineGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970A9401FE2B1A20063FDD6 /* GKLineGraph.m */; };
 		098D3F101FDA6E4A0078B376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F0F1FDA6E4A0078B376 /* main.m */; };
 		098D3F131FDA6E4A0078B376 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 098D3F121FDA6E4A0078B376 /* AppDelegate.m */; };
 		098D3F191FDA6E4A0078B376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D3F171FDA6E4A0078B376 /* Main.storyboard */; };
@@ -53,10 +53,10 @@
 		09155E4E1FDE8A7C008B59C2 /* GKBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBarGraph.h; sourceTree = "<group>"; };
 		09155E4F1FDE8A7C008B59C2 /* GKBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBarGraph.m; sourceTree = "<group>"; };
 		09155E501FDE8A7C008B59C2 /* GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
-		09155E521FDE8A7C008B59C2 /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLineGraph.h; sourceTree = "<group>"; };
-		09155E531FDE8A7C008B59C2 /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLineGraph.m; sourceTree = "<group>"; };
 		09155E541FDE8A7C008B59C2 /* UIColor+GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GraphKit.h"; sourceTree = "<group>"; };
 		09155E551FDE8A7C008B59C2 /* UIColor+GraphKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GraphKit.m"; sourceTree = "<group>"; };
+		0970A93F1FE2B1A20063FDD6 /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLineGraph.h; sourceTree = "<group>"; };
+		0970A9401FE2B1A20063FDD6 /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLineGraph.m; sourceTree = "<group>"; };
 		098D3F0B1FDA6E490078B376 /* BrainSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098D3F0F1FDA6E4A0078B376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		098D3F111FDA6E4A0078B376 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -171,8 +171,8 @@
 		09155E511FDE8A7C008B59C2 /* LineGraph */ = {
 			isa = PBXGroup;
 			children = (
-				09155E521FDE8A7C008B59C2 /* GKLineGraph.h */,
-				09155E531FDE8A7C008B59C2 /* GKLineGraph.m */,
+				0970A93F1FE2B1A20063FDD6 /* GKLineGraph.h */,
+				0970A9401FE2B1A20063FDD6 /* GKLineGraph.m */,
 			);
 			path = LineGraph;
 			sourceTree = "<group>";
@@ -396,7 +396,8 @@
 				TargetAttributes = {
 					098D3F0A1FDA6E490078B376 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = M4946NB5UK;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -491,7 +492,6 @@
 				098D3F431FDA8A840078B376 /* StartScreenVC.m in Sources */,
 				098D3F4C1FDAAA2E0078B376 /* Utility.m in Sources */,
 				09155E451FDE6732008B59C2 /* MoodTrackerVC.m in Sources */,
-				09155E581FDE8A7C008B59C2 /* GKLineGraph.m in Sources */,
 				09155E591FDE8A7C008B59C2 /* UIColor+GraphKit.m in Sources */,
 				098D3F491FDA8AA00078B376 /* LoginVC.m in Sources */,
 				098D3F361FDA6F1C0078B376 /* WToast.m in Sources */,
@@ -501,6 +501,7 @@
 				098D3F331FDA6F1C0078B376 /* NIDropDown.m in Sources */,
 				09155E391FDE54D1008B59C2 /* RatedTherapyVC.m in Sources */,
 				09B85E551FDFD2EB0061DE48 /* MoodGraphDetailVC.m in Sources */,
+				0970A9411FE2B1A20063FDD6 /* GKLineGraph.m in Sources */,
 				0904ED5D1FDBB80C0085BD30 /* TherapyDetailVC.m in Sources */,
 				098D3F551FDAC0F40078B376 /* KYEmbedDrawerControllerSegue.m in Sources */,
 				09155E411FDE668A008B59C2 /* ProfileVC.m in Sources */,
@@ -626,7 +627,9 @@
 			baseConfigurationReference = DCEEA0AE85190A27D33400D5 /* Pods-BrainSpace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M4946NB5UK;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BrainSpace/ThirdParty",
@@ -645,7 +648,9 @@
 			baseConfigurationReference = AFDE42CA68556E20EAAA7041 /* Pods-BrainSpace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M4946NB5UK;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BrainSpace/ThirdParty",

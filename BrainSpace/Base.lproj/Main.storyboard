@@ -252,6 +252,7 @@
                             <constraint firstAttribute="trailing" secondItem="8JU-X7-1N8" secondAttribute="trailing" id="y9v-4q-S47"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mbP-sc-zmu"/>
                     <connections>
                         <outlet property="btnAgreement" destination="X6A-Xe-hFf" id="jIA-gF-kHp"/>
                         <outlet property="btnFBLogin" destination="HXN-Hd-DDw" id="dL1-Wu-tmT"/>
@@ -1768,7 +1769,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hOz-ev-4rM"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O8h-Aj-SYG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sb5-3q-mIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
